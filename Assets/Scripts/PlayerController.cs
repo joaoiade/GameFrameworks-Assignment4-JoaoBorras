@@ -37,6 +37,14 @@ public class PlayerController : MonoBehaviour
             animator.SetTrigger("Jump");
         }
     }
+    
+    public void Attack(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            animator.SetTrigger("Attack");
+        }
+    }
 
     void FixedUpdate()
     {
